@@ -1,0 +1,27 @@
+@import '../base/variables';
+
+.services {
+	&__more {
+		background-color: @bgColorDark;
+		margin-top: 20px;
+		margin-bottom: 40px;
+		padding: 0 28px;
+		border-radius: @border-radius-base;
+	}
+	&__text,
+	&__btn-more {
+		display: inline-block;
+  	vertical-align: middle;
+	}
+	&__text {
+		width: 70%;
+		padding-right: 15px;
+	}
+	&__btn-more {
+		.btn-main {		
+			max-width: 190px;
+			width: 190px;	
+			text-transform: uppercase;
+		}
+	}
+}

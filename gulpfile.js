@@ -10,7 +10,7 @@ var minifycss = require('gulp-minify-css');
 var less = require('gulp-less');
 var browserSync = require('browser-sync');
 var pug = require('gulp-pug')
-
+var jquery = require('jquery');
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -38,6 +38,7 @@ gulp.task('views', function buildHTML() {
   .pipe(gulp.dest('public/'));
 });
 
+
 gulp.task('styles', function(){
   gulp.src(['frontend/styles/**/*.less'])
     .pipe(plumber({
@@ -46,7 +47,9 @@ gulp.task('styles', function(){
         this.emit('end');
     }}))
     .pipe(less())
-    .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 4 versions'))
+		.pipe(concat('all.css'))
+
     .pipe(gulp.dest('public/styles/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
@@ -54,24 +57,33 @@ gulp.task('styles', function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
-gulp.task('scripts', function(){
-  return gulp.src('src/scripts/**/*.js')
-    .pipe(plumber({
+gulp.task('scripts', function() {
+  return gulp.src([
+        'node_modules/jquery/dist/jquery.min.js',
+				'node_modules/slick-carousel/slick/slick.min.js',
+        'frontend/scripts/**/*.js'
+   ])
+	.pipe(plumber({
       errorHandler: function (error) {
         console.log(error.message);
         this.emit('end');
     }}))
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('public/scripts/'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts/'))
+    .pipe(gulp.dest('public/scripts/'))
     .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('default', ['browser-sync'], function(){
-	gulp.watch('frontend/views/pages/*.pug', ['views']);
-  gulp.watch("frontend/styles/**/*.less", ['styles']);
-  gulp.watch("src/scripts/**/*.js", ['scripts']);
+	gulp.watch('frontend/views/**/*.pug', ['views']);
+	gulp.watch("frontend/styles/**/*.less", ['styles']);
+	gulp.watch("public/*.html", ['bs-reload']);
+	gulp.src('frontend/scripts/**/*.js')
+		.pipe(watch('frontend/scripts/**/*.js', function(event) { // if changed any file in "src/scripts" (recursively)
+				gulp.run('scripts'); // run task "scripts"
+	}));
+
   gulp.watch("public/*.html", ['bs-reload']);
 });

@@ -6,11 +6,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>sliceart</title>
     <meta name="description" content="">
-    <link rel="stylesheet" href="public/styles/screen.css">
+    <link rel="stylesheet" href="styles/all.min.css">
   </head>
   <body>
-    <h3>header
-      <h1>lorem</h1>
-    </h3>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo"></div>
+        <ul class="header__nav pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li class="dropdown"><a href="#">PORTFOLIO</a>
+            <ul class="dropdown__menu">
+              <li><a href="#">Portfolio 2 column page</a></li>
+              <li><a href="#">Portfolio 2 column page</a></li>
+              <li><a href="#">Portfolio 2 column page</a></li>
+            </ul>
+          </li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">CONTACTS</a></li>
+          <li><a href="#">Search</a></li>
+        </ul>
+      </div>
+    </header>
+    <section class="carousel">
+      <div class="carousel__inner">
+        <div class="carousel__caption">
+          <h1> <span class="title">VESTIBULUM</span></h1>
+          <div class="subtitle"><span class="subtitle-inner">Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.	</span></div>
+        </div>
+        <div class="carousel__items hidden-xs" data-role="carousel-main">
+          <div class="carousel__item">
+            <div class="carousel__img-holder" style="background-image: url(http://placehold.it/1500x500/7f8c8c/7f8c8c); "></div>
+          </div>
+          <div class="carousel__item">
+            <div class="carousel__img-holder" style="background-image: url(http://placehold.it/1500x500/978298/978298)"></div>
+          </div>
+          <div class="carousel__item">
+            <div class="carousel__img-holder" style="background-image: url(http://placehold.it/1500x500/eca1f1/eca1f1)"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="content">
+      <section class="section-services">
+        <div class="container services">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="services__more">
+                <div class="services__text">
+                  <h2 class="h2">Some of our top services</h2>
+                  <p>Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
+                </div>
+                <div class="services__btn-more">
+                  <button class="btn btn-main btn-main--invert">view more</button>
+                </div>
+              </div>
+            </div>
+            <div class="services__list col-xs-12">
+              <div class="row">
+                <div class="col-xxs-12 col-xs-6 col-md-3">
+                  <div class="card"><i class="card__icon fa fa-thumbs-o-up" aria-hidden="true"> </i>
+                    <h4 class="card__title">SUSPENDISSE</h4>
+                    <p> Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc. </p>
+                    <button class="btn btn-main">read more</button>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                  <div class="card">
+                    <p>lorem		</p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                  <div class="card">
+                    <p>lorem	</p>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                  <div class="card">
+                    <p>lorem</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section--full-width section--pre-about">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              <h2 class="title-largest">WHY MODUS VERSUS?</h2>
+              <p>Capacitance cascading integer reflective interface data development high bus cache dithering transponder.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-about">
+        <div class="container">
+          <div class="gallery-sreens gallery-sreens--3-screens">
+            <div class="screen-item screen-item--first">
+              <div class="screen-item__img-holder"><img src="http://placehold.it/363x215/62b9b0/fff?text=your+image"></div>
+            </div>
+            <div class="screen-item">
+              <div class="screen-item__img-holder"><img src="http://placehold.it/560x310/7f8c8c/fff?text=your+image"></div>
+            </div>
+            <div class="screen-item screen-item--last">
+              <div class="screen-item__img-holder"><img src="http://placehold.it/363x215/62b9b0/fff?text=your+image"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec . </p>
+            <p>Phone:<a href="tel:+18225695896">182 2569 5896</a></p>
+            <p>e-mail:<a href="mailto:info@modu.versus">info@modu.versus</a></p>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="row">
+              <div class="col-xs-6">
+                <p class="footer__title">Company</p>
+                <ul class="footer__nav">
+                  <li><a href="">About</a></li>
+                  <li><a href="">FAQ</a></li>
+                  <li><a href="">Contact</a></li>
+                  <li><a href="">Terms</a></li>
+                  <li><a href="">Privacy</a></li>
+                  <li><a href="">Testimonials</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-6">
+                <p class="footer__title">Community</p>
+                <ul class="footer__nav">
+                  <li><a href="">Blog</a></li>
+                  <li><a href="">Forum</a></li>
+                  <li><a href="">Support</a></li>
+                  <li><a href="">Newsletter</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="footer__media-list">
+              <div class="media__title"> <i>from the</i><strong> BLOG</strong></div>
+              <div class="media">
+                <figure class="media__img"><img src="images/media-cup.png"></figure>
+                <div class="media__content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <p class="media__date">26 May, 2013</p>
+                </div>
+              </div>
+              <div class="media">
+                <figure class="media__img"><img src="images/media-cup.png"></figure>
+                <div class="media__content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                  <p class="media__date">26 May, 2013</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="footer-bar">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>2013  ModusVersus</p>
+            <ul class="footer__social-list">
+              <li><a href="">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/all.min.js"></script>
   </body>
 </html>

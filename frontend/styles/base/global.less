@@ -1,4 +1,114 @@
-// Global CSS goes here
-h1 {
-	font-size: 20px;
+@import '../base/variables';
+
+body {
+	font-size: 14px;
+	color: @fontColor;
+	background-color: @bgColor;
+}
+
+.content {
+	background-color: @bgColor;
+}
+
+.title-largest {
+	color: @brandColor;
+	font-size: 42px;
+   margin-top: 0;
+   margin-bottom: 4px;
+	
+	 @media (max-width: @screen-md) {
+			font-size: 34px;
+	 }
+	 @media (max-width: @screen-xs) {
+			font-size: 28px;
+	  }
+}
+
+.btn {
+	border-radius: @border-radius-base;
+	color: #fff;
+	font-size: 16px;
+	padding: 12px;
+	&:hover,
+	&:active,
+	&:focus {
+		color: #fff;
+		outline: none !important;
+	}
+	
+}
+.btn-main {		
+	background: @brandColorInvert;
+	box-shadow: 0px 5px 0px 0px @brandColorInvertDark;
+	&:hover {
+		background: @brandColor;
+		box-shadow: 0px 5px 0px 0px @brandColorDark;
+	}
+	&--invert {
+		background: @brandColor;
+		box-shadow: 0px 5px 0px 0px @brandColorDark;
+		&:hover {
+			background: lighten(@brandColor, 3%);
+		}
+	}
+}
+
+.card {
+	position: relative;
+	background: #f8f8f8;
+	padding: 50px 15px 15px;
+	height: 310px;
+	margin-bottom: 50px;
+	text-align: center;
+	border-radius: @border-radius-base;
+	box-shadow: 0px 5px 0px 0px @bgColorDark;
+	&:hover {
+		background: #fff;
+		box-shadow: none;
+		&__icon {
+			color: @brandColor;
+		}
+	}
+	&__icon {
+		font-size: 60px;
+		color: @brandColorInvert;
+	}
+	&__title {
+		margin-bottom: 26px;
+		font-weight: bold;
+	}
+	.btn-main {
+		position: absolute;
+    bottom: -20px;
+    left: 15%;
+    width: 70%;
+		
+	}
+}
+
+@media (min-width: @screen-xlg) {
+	.container {
+		width: 1200px;
+	}
+}
+@media (max-width: @screen-xxs) {
+	.col-xxs-12 {
+		width: 100%;
+	}
+}
+
+.section {
+	&--full-width {
+		background: url(../images/decor.png) 	repeat-x #ececec;
+		padding-top: 68px;
+	}
+	&--pre-about {
+		height: 398px;
+	}
+}
+
+.section-about {
+	.gallery-sreens {
+		 margin-top: -198px;
+	}
 }

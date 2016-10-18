@@ -1,3 +1,50 @@
-include ../base/global
+extend ../base/global
 
-	h1 lorem
+block carousel
+	include ../components/carousel-main
+			
+block content
+
+	section.section-services
+		.container.services
+			.row
+				.col-xs-12
+					.services__more
+						.services__text
+							h2.h2 Some of our top services
+							p Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
+						.services__btn-more
+							button.btn.btn-main.btn-main--invert view more
+
+				.services__list.col-xs-12
+					.row
+						.col-xxs-12.col-xs-6.col-md-3
+							.card
+								i(class="card__icon fa fa-thumbs-o-up" aria-hidden="true") 
+								h4.card__title SUSPENDISSE
+								p  Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc. 
+								button.btn.btn-main read more
+						.col-xs-6.col-sm-4.col-md-3
+							.card
+								p lorem		
+						.col-xs-6.col-sm-4.col-md-3
+							.card
+								p lorem	
+						.col-xs-6.col-sm-4.col-md-3
+							.card
+								p lorem
+
+	section.section--full-width.section--pre-about
+		.container
+			.row
+				.col-xs-12.text-center
+					h2.title-largest WHY MODUS VERSUS?
+					p Capacitance cascading integer reflective interface data development high bus cache dithering transponder.
+	
+	section.section-about
+		.container
+			include ../components/gallery-sreens
+			
+				
+				
+	

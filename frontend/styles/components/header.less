@@ -1,0 +1,26 @@
+@import '../base/variables';
+.header {
+	background-color: @brandColorInvert;
+	color: #fff;
+	&__nav {
+		position: relative;
+		li {
+			display: inline-block;
+			margin: 10px;
+		}
+	}
+}
+
+.dropdown {
+	&__menu {
+		display: none;
+	
+		&--open {
+			&__menu {
+				display: block;
+			}
+		
+		}
+	}
+}
+	

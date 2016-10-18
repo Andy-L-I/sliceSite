@@ -1,0 +1,103 @@
+@import '../base/variables';
+
+.carousel {
+	position: relative;
+	color: #fff;
+	&__img-holder  {
+		height: 500px;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+		
+		@media (max-width: @screen-md) {
+			height: 350px;
+		}
+		
+	}
+	
+	&__caption {
+    position: absolute;
+    top: 27%;
+    width: 100%;
+    z-index: 10;
+		text-align: center;
+		
+		@media (max-width:@screen-xs) {
+			position: inherit;
+		}
+		
+		.title {
+			background: @brandColor;
+			padding: 1px 10px;
+    	font-size: 50px;
+    	font-weight: bold;
+			border-radius: @border-radius-base;
+		}
+		.subtitle {
+			width: 470px;
+    	max-width: 60%;
+			margin: 14px auto 0;
+			padding: 10px;
+			background: #3f4646;
+			font-size: 16px;
+			line-height: 24px;
+			border-radius: @border-radius-base;
+			
+			@media (max-width:@screen-xs) {
+				max-width: 94%;
+			}
+			
+		}
+	}
+
+	.slick-prev,
+	.slick-next {
+		z-index: 20;
+		background: @brandColor;
+		box-shadow: 0 5px 0 0 @brandColorDark;
+		height: 55px;
+		width: 50px;
+		&:before {
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-decoration: inherit;
+			font-size: 38px;
+		}
+	}
+	.slick-prev {
+		left: 0;
+		border-top-right-radius: @border-radius-base;
+		border-bottom-right-radius: @border-radius-base;
+		&:before {
+			content: "\f100";
+		}
+	}
+	.slick-next {
+		right: 0;
+		border-top-left-radius: @border-radius-base;
+		border-bottom-left-radius: @border-radius-base;
+		&:before {
+			content: "\f101";
+		}
+	}
+	.slick-dots {
+		bottom: -40px;
+		li {
+			width: 60px;
+			button {
+				height: 5px;
+				width: 60px;
+				padding: 0;
+				background: #b0b8b9;
+				z-index: 20;
+				&:before {
+					content: none;
+				}
+			}
+			&.slick-active button {
+				background: @brandColor;
+			}
+		}
+	}
+}
