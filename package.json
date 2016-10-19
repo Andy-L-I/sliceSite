@@ -24,6 +24,8 @@
     "gulp-uglify": "1.2.0"
   },
   "dependencies": {
+		"public": "git://github.com/Andy-L-I/sliceart.git",
     "handlebars": "^4.0.5"
   }
+	
 }
