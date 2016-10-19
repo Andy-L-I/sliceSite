@@ -14,25 +14,33 @@ block content
 							h2.h2 Some of our top services
 							p Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.
 						.services__btn-more
-							button.btn.btn-main.btn-main--invert view more
+							button.btn.btn-main.btn-main--invert(data-role="get-more-service") view more
 
 				.services__list.col-xs-12
-					.row
+					.row(data-role="service-top-anchor")
+						script(id="getTopServices" type="text/template")
+							| {{#services}}
+							.col-xxs-12.col-xs-6.col-md-3
+								.card
+									i(class="card__icon {{class}}")
+									h4.card__title {{title}}
+									p {{description}}
+									button.btn.btn-main read more
+							| {{/services}}
+							
+					script(id="getServices" type="text/template")
+						| {{#services}}
 						.col-xxs-12.col-xs-6.col-md-3
 							.card
-								i(class="card__icon fa fa-thumbs-o-up" aria-hidden="true") 
-								h4.card__title SUSPENDISSE
-								p  Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc. 
+								i(class="card__icon {{class}}")
+								h4.card__title {{title}}
+								p {{description}}
 								button.btn.btn-main read more
-						.col-xs-6.col-sm-4.col-md-3
-							.card
-								p lorem		
-						.col-xs-6.col-sm-4.col-md-3
-							.card
-								p lorem	
-						.col-xs-6.col-sm-4.col-md-3
-							.card
-								p lorem
+						| {{/services}}
+						
+					.row(data-role="service-anchor")
+						.col-xs-12.spinner.hidden
+							i(class="fa fa-spinner fa-pulse fa-6x fa-fw")
 
 	section.section--full-width.section--pre-about
 		.container
@@ -44,7 +52,30 @@ block content
 	section.section-about
 		.container
 			include ../components/gallery-sreens
-			
+		
+			.row
+				.col-xs-12.col-sm-3
+					h4 
+						strong Why Choose Us ?
+					
+				.col-xs-12.col-sm-5
+					p Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus 
+						a(href="") vehicula mattis
+						|. Nulla ac massa at dolor condimentum eleifend vitae vitae urna.
+				.col-xs-12.col-sm-3
+						h4 
+							strong What Client’s Say ?
+			.row
+				.col-xs-12.col-sm-3
+						ul.list-arrows
+							li Quisque at massa ipsum 
+							li Maecenas a lorem augue, egestas 
+							li Cras vitae felis at lacus eleifend 
+							li Etiam auctor diam pellentesque 
+							li Nulla ac massa at dolor 
+							li Condimentum eleifend vitae vitae  
+						
+				.col-xs-12.col-sm-5
+				.col-xs-12.col-sm-3
 				
-				
-	
+			include ../components/carousel-clients

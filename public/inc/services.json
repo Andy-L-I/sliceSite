@@ -1,0 +1,37 @@
+{
+	"services": [{
+		"title": "suspense",
+		"description": "Autem ab quia sed, maxime alias, dolorem eius nam illum magnam exercitationem praesentium aliquam eligendi quasi sequi, repellat perferendis,  quasi",
+		"class" : "fa fa-thumbs-o-up"
+	}, {
+		"title": "suspense",
+		"description": "Autem ab quia sed, maxime alias, dolorem eius quod repudiandae quasi",
+		"class" : "fa fa-flag"
+	}, {
+		"title": "composition",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ad, nam ipsam recusandae illum, totam id dignissimos cumque dolorum.",
+		"class" : "fa a fa-key"
+	}, {
+		"title": "perspective",
+		"description": "Lorem ipsum dolor cumque dolorum.",
+		"class" : "fa fa-flask"
+	}, {
+		"title": "References",
+		"description": "Lorem ipsum dolor  cumque dolorum.",
+		"class" : "fa fa-flask"
+	}, {
+		"title": "management",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ad, nam ipsam recusandae illum, totam id dignissimos ",
+		"class" : "fa fa-flask"
+	}, {
+		"title": "suspense",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ad, nam ipsam recusandae illum, totam id dignissimos asperiores .",
+		"class" : "fa fa-flask"
+	}, {
+		"title": "suspense",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ad, nam ipsam recusandae illum, totam id dignissimos asperiores.",
+		"class" : "fa fa-flask"
+	}
+]
+
+}

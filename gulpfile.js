@@ -8,6 +8,7 @@ var imagemin = require('gulp-imagemin'),
     cache = require('gulp-cache');
 var minifycss = require('gulp-minify-css');
 var less = require('gulp-less');
+var postcss = require('gulp-postcss');
 var browserSync = require('browser-sync');
 var pug = require('gulp-pug')
 var jquery = require('jquery');
@@ -40,6 +41,9 @@ gulp.task('views', function buildHTML() {
 
 
 gulp.task('styles', function(){
+	var processors = [
+  	autoprefixer({browsers: ['last 4 version']}),
+  ];
   gulp.src(['frontend/styles/**/*.less'])
     .pipe(plumber({
       errorHandler: function (error) {
@@ -47,7 +51,7 @@ gulp.task('styles', function(){
         this.emit('end');
     }}))
     .pipe(less())
-    .pipe(autoprefixer('last 4 versions'))
+   // .pipe(postcss(processors))
 		.pipe(concat('all.css'))
 
     .pipe(gulp.dest('public/styles/'))

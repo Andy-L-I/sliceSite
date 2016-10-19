@@ -10,9 +10,8 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__logo"></div>
-        <ul class="header__nav pull-right">
+      <div class="container"><a class="header__logo" href="#"><strong>MODUS</strong>services</a>
+        <ul class="header__nav pull-right hidden-xs">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">ABOUT</a></li>
           <li><a href="#">SERVICES</a></li>
@@ -26,8 +25,9 @@
           <li><a href="#">BLOG</a></li>
           <li><a href="#">FEATURES</a></li>
           <li><a href="#">CONTACTS</a></li>
-          <li><a href="#">Search</a></li>
+          <li><a href="#"> <i class="fa fa-search"></i></a></li>
         </ul>
+        <mobile-nav class="visible-xs pull-right"><a href="#"> <i class="fa fa-bars"></i></a></mobile-nav>
       </div>
     </header>
     <section class="carousel">
@@ -60,34 +60,33 @@
                   <p>Ut eleifend libero sed neque rhoncus consequat. Maecenas tincidunt, augue et rutrum condimentum, libero lectus mattis orci, ut commodo.</p>
                 </div>
                 <div class="services__btn-more">
-                  <button class="btn btn-main btn-main--invert">view more</button>
+                  <button class="btn btn-main btn-main--invert" data-role="get-more-service">view more</button>
                 </div>
               </div>
             </div>
             <div class="services__list col-xs-12">
-              <div class="row">
+              <div class="row" data-role="service-top-anchor">
+                <script id="getTopServices" type="text/template">{{#services}}
+                  <div class="col-xxs-12 col-xs-6 col-md-3">
+                    <div class="card"><i class="card__icon {{class}}"></i>
+                      <h4 class="card__title">{{title}}</h4>
+                      <p>{{description}}</p>
+                      <button class="btn btn-main">read more</button>
+                    </div>
+                  </div>{{/services}}
+                </script>
+              </div>
+              <script id="getServices" type="text/template">{{#services}}
                 <div class="col-xxs-12 col-xs-6 col-md-3">
-                  <div class="card"><i class="card__icon fa fa-thumbs-o-up" aria-hidden="true"> </i>
-                    <h4 class="card__title">SUSPENDISSE</h4>
-                    <p> Quisque id tellus quis risus vehicula vehicula ut turpis. In eros nulla, placerat vitae at, vehicula ut nunc. </p>
+                  <div class="card"><i class="card__icon {{class}}"></i>
+                    <h4 class="card__title">{{title}}</h4>
+                    <p>{{description}}</p>
                     <button class="btn btn-main">read more</button>
                   </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="card">
-                    <p>lorem		</p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="card">
-                    <p>lorem	</p>
-                  </div>
-                </div>
-                <div class="col-xs-6 col-sm-4 col-md-3">
-                  <div class="card">
-                    <p>lorem</p>
-                  </div>
-                </div>
+                </div>{{/services}}
+              </script>
+              <div class="row" data-role="service-anchor">
+                <div class="col-xs-12 spinner hidden"><i class="fa fa-spinner fa-pulse fa-6x fa-fw"></i></div>
               </div>
             </div>
           </div>
@@ -114,6 +113,40 @@
             </div>
             <div class="screen-item screen-item--last">
               <div class="screen-item__img-holder"><img src="http://placehold.it/363x215/62b9b0/fff?text=your+image"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-3">
+              <h4> <strong>Why Choose Us ?</strong></h4>
+            </div>
+            <div class="col-xs-12 col-sm-5">
+              <p>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam auctor diam pellentesque lectus <a href="">vehicula mattis</a>. Nulla ac massa at dolor condimentum eleifend vitae vitae urna.</p>
+            </div>
+            <div class="col-xs-12 col-sm-3">
+              <h4> <strong>What Client’s Say ?</strong></h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-3">
+              <ul class="list-arrows">
+                <li>Quisque at massa ipsum </li>
+                <li>Maecenas a lorem augue, egestas </li>
+                <li>Cras vitae felis at lacus eleifend </li>
+                <li>Etiam auctor diam pellentesque </li>
+                <li>Nulla ac massa at dolor </li>
+                <li>Condimentum eleifend vitae vitae  </li>
+              </ul>
+            </div>
+            <div class="col-xs-12 col-sm-5"></div>
+            <div class="col-xs-12 col-sm-3"></div>
+          </div>
+          <div class="carousel-clients hidden-xs">
+            <div class="carousel-clients__inner">
+              <div class="carousel-clients__title">
+                <h4>Our Happy Clients</h4><span class="separtor"></span>
+                <div class="buttons"></div>
+              </div>
+              <div class="hidden-xs" data-role="carousel-clients"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"><img class="img-responsive" src="images/client.png"></div>
             </div>
           </div>
         </div>
@@ -173,13 +206,18 @@
         </div>
       </div>
     </footer>
-    <div class="footer-bar">
+    <div class="footer footer-bar">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12">
+          <div class="col-xs-6">
             <p>2013  ModusVersus</p>
-            <ul class="footer__social-list">
-              <li><a href="">Blog</a></li>
+          </div>
+          <div class="col-xs-6">
+            <ul class="list-inline text-right list-social">
+              <li><a href="#" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"> <i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"> <i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
+              <li><a href="#" target="_blank"> <i class="fa fa-rss" aria-hidden="true"></i></a></li>
             </ul>
           </div>
         </div>

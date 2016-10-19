@@ -1,12 +1,50 @@
 @import '../base/variables';
 .header {
-	background-color: @brandColorInvert;
+	background: url(../images/decor_h.png) bottom 	repeat-x @brandColorInvert;
 	color: #fff;
+	padding: 10px;
+	
+	&__logo {
+		float: left;
+		font-size: 28px;
+		margin-top: 6px;
+		margin-bottom: 8px;
+	}
 	&__nav {
 		position: relative;
+		margin-bottom: 0;
+		margin-top: 8px;
 		li {
 			display: inline-block;
-			margin: 10px;
+			margin-left: 14px;
+			padding: 7px 15px;
+			font-size: 12px;
+			text-transform: uppercase;
+			border-radius: @border-radius-base;
+			&.active {
+				background: #62a29e;
+				box-shadow: 0 2px 0 0 #528b86;
+			}
+			&.dropdown {
+				background: @brandColor;
+				box-shadow:  0 2px 0 0 @brandColorDark;
+				&:before {
+					content: "\f107";
+					font-family: FontAwesome;
+					padding-right: 10px;
+    			font-style: normal;
+    			font-weight: 400;
+    			text-decoration: inherit;
+				}
+			}
+			
+		}
+
+	}
+	a {
+		color: #fff;
+		&:hover {
+			color: #fff;
 		}
 	}
 }

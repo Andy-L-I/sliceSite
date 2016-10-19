@@ -24,6 +24,25 @@ body {
 	  }
 }
 
+a {
+	color: @brandColor;
+	&:hover,
+	&:active,
+	&:focus {
+		color: @brandColorLight;
+		text-decoration: none;
+	}
+}
+p a {
+	text-decoration: underline;
+}
+
+h4 {
+	margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+}
+
 .btn {
 	border-radius: @border-radius-base;
 	color: #fff;
@@ -53,6 +72,27 @@ body {
 	}
 }
 
+.list-arrows {
+	padding-left: 0;
+	li {
+		position: relative;
+		list-style: none;
+		padding-left: 20px;
+		margin-bottom: 8px;
+		
+		&:before {
+			content: '\f061';
+			font-family: FontAwesome;
+			position: absolute;
+			left: 0;
+			color: @brandColor;
+    	font-style: normal;
+    	font-weight: 400;
+    	text-decoration: inherit;
+		}
+	}
+}
+
 .card {
 	position: relative;
 	background: #f8f8f8;
@@ -75,7 +115,9 @@ body {
 	}
 	&__title {
 		margin-bottom: 26px;
+		margin-top: 10px;
 		font-weight: bold;
+		text-transform: uppercase;
 	}
 	.btn-main {
 		position: absolute;
@@ -111,4 +153,9 @@ body {
 	.gallery-sreens {
 		 margin-top: -198px;
 	}
+}
+
+.spinner {
+	text-align: center;
+	font-size: 70px;
 }

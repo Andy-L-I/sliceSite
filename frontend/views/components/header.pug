@@ -1,8 +1,10 @@
 header.header
 	.container
-		.header__logo
+		a.header__logo(href='#')
+			strong MODUS
+			|services
 		
-		ul.header__nav.pull-right
+		ul.header__nav.pull-right.hidden-xs
 			li.active
 				a(href="#") Home
 			li
@@ -26,4 +28,9 @@ header.header
 			li
 				a(href="#") CONTACTS
 			li
-				a(href="#") Search
+				a(href="#") 
+					i.fa.fa-search
+					
+		mobile-nav.visible-xs.pull-right
+			a(href="#") 
+				i.fa.fa-bars
